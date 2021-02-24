@@ -4,7 +4,7 @@ from twitter import Twitter
 
 class TwitterTest(unittest.TestCase):
 
-    def setUp(self):
+    def setUp(self) -> None:
         self.twitter = Twitter()
 
     def test_initialization(self):
