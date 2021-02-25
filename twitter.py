@@ -14,3 +14,6 @@ class Twitter:
 
     def find_hashtags(self, message):
         return [m.lower() for m in re.findall(r'#(\w+)', message)]
+
+    def delete(self):
+        print("It's the end")
