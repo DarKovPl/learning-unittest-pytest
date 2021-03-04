@@ -39,7 +39,6 @@ class Twitter:
         if len(message) > 160:
             raise Exception('The message is too long')
         self.tweets.append({'message': message, 'avatar': self.get_user_avatar()})
-        print(self.tweets)
         if self.backend:
             self.backend.write(json.dumps(self.tweets))
 
@@ -47,5 +46,3 @@ class Twitter:
         return [m.lower() for m in re.findall(r'#(\w+)', message)]
 
 
-r = Twitter(username='python')
-r.tweet('Test')
